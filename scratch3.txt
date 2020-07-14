@@ -1,0 +1,109 @@
+            managed_policy = {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:ListBucket"
+                  ],
+                 "Resource": [
+                    "arn:aws:s3:::" + bucket_name
+                  ]
+                },
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "s3:PutObject",
+                    "s3:GetObject",
+                    "s3:DeleteObject",
+                    "s3:PutObjectAcl"
+                  ],
+                  "Resource": [
+                     "arn:aws:s3:::" + bucket_name + "/*"
+                  ]
+                }
+              ]
+            }
+			
+			
+			from ec2_metadata import ec2_metadata
+			
+			            trust_policy = {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "ec2.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            }
+			
+			AWS_ROLE_ARN
+			aws configure set region eu-west-2 --profile convex_instance_profile arn=arn:aws:iam::707712313852:role/convex/convex_test_role
+			
+			role_arn=rolearnvalue
+credential_source = Ec2InstanceMetadata
+
+export AWS_ROLE_ARN=arn:aws:iam::707712313852:role/convex/convex_test_role
+
+aws s3 ls s3://sthconvex2e5a6d71-785d-4411-a153-626afefea0cd
+
+
+install.packages("aws.s3", repos = c("cloudyr" = "http://cloudyr.github.io/drat")) library("aws.s3")
+
+
+library(sparklyr) 
+library(dplyr) 
+usercsv_tbl <- spark_read_parquet(sc,name = "usertbl",path="s3n://sthconvex2e5a6d71-785d-4411-a153-626afefea0cd/convex/address_file.parquet") src_tbls(sc)
+
+sudo yum install -y libssl-dev 
+
+sudo yum install openssl-dev
+sudo yum install
+sudo yum install -y build-essential libssl-dev libxml2-dev libcurl4-openssl-dev
+
+--Get linux version
+cat /etc/os-release
+
+install.packages('curl')
+install.packages('httr')
+install.packages('xml2')
+install.packages("aws.s3", repos = c("cloudyr" = "http://cloudyr.github.io/drat"))
+
+install.packages("aws.s3", quiet = TRUE)
+
+
+sudo yum install -y libcurl-devel
+
+sudo yum install -y libxml2-dev
+
+
+utils::install.packages("partDF_1.0.0.9001.tar.gz", repos = NULL, lib = tempdir(), quiet = TRUE)
+
+
+
+aws s3 ls s3://sthconvex2e5a6d71-785d-4411-a153-626afefea0cd/convex/address_file.parquet
+
+
+aws s3 presign s3://sthconvex2e5a6d71-785d-4411-a153-626afefea0cd/convex/address_file.parquet
+aws s3 cp getfile.parquet https://sthconvex2e5a6d71-785d-4411-a153-626afefea0cd.s3.amazonaws.com/convex/address_file.parquet?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Expires=3600&X-Amz-Credential=AKIA2JRXQ5H6EEAIQ5XX%2F20200629%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Date=20200629T124246Z&X-Amz-Signature=5e43f92dc9cd7a8c5a403e2ae72113d3deda643570730afe2090d91b05ab1df5
+
+https://sthconvex2e5a6d71-785d-4411-a153-626afefea0cd.s3.amazonaws.com/convex/address_file.parquet?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Expires=3600&X-Amz-Credential=AKIA2JRXQ5H6EEAIQ5XX%2F20200629%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Date=20200629T124246Z&X-Amz-Signature=5e43f92dc9cd7a8c5a403e2ae72113d3deda643570730afe2090d91b05ab1df5
+
+
+
+aws s3 cp s3://sthconvex5806f5fe-d72f-4936-9a15-c6127f6b60f8/address_file.parquet testdown.parquet
+
+
+aws s3 cp s3:///convex/address_file.parquet testdown.parquet
+
+
+
+aws s3 cp s3://sthconvex5806f5fe-d72f-4936-9a15-c6127f6b60f8/address_file.parquet testdown.parquet
+
+
+https://sthconvex5806f5fe-d72f-4936-9a15-c6127f6b60f8.s3.amazonaws.com/address_file.parquet

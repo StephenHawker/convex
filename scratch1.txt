@@ -1,0 +1,131 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket"
+      ],
+     "Resource": [
+        "arn:aws:s3:::<s3-bucket-name>"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject",
+        "s3:PutObjectAcl"
+      ],
+      "Resource": [
+         "arn:aws:s3:::<s3-bucket-name>/*"
+      ]
+    }
+  ]
+}
+
+
+An error occurred (AccessDenied) when calling the CreatePolicy operation: User: arn:aws:iam::707712313852:user/convex_user is not authorized to perform: iam:CreatePolicy on resource: policy convex_s3_policy
+
+'arn:aws:s3:::sthconvex38022998-5ed9-480a-9bf5-838e81f501b3'
+An error occurred (AccessDenied) when calling the CreatePolicy operation: User: arn:aws:iam::707712313852:user/convex_user is not authorized to perform: iam:CreatePolicy on resource: policy convex_s3_policy
+
+
+        ############################################################
+        # create policy
+        ############################################################
+        def create_policy(self, policy_name):
+            """
+            Get the security policy of a bucket.
+            Usage is shown in usage_demo at the end of this module.
+            :param role_name: The name of the policy.
+            """
+            try:
+
+                managed_policy = {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "S3ReadOnly",
+                            "Effect": "Allow",
+                            "Action": [
+                                "s3:Get*",
+                                "s3:List*"
+                            ],
+                            "Resource": [
+                                "*"
+                            ]
+                        },
+                        {
+                            "Sid": "Ec2FullAccess",
+                            "Action": "ec2:*",
+                            "Effect": "Allow",
+                            "Resource": "*"
+                        }
+                    ]
+                }
+
+        except ClientError as error:
+
+            self.LOGGER.exception("Couldn't create role named '%s' in region=%s.",
+                             role_name, self.region)
+
+            raise error
+        else:
+            return res
+			
+			
+			
+        put_policy_desc = {
+            'Version': '2012-10-17',
+            'Id': str(uuid.uuid1()),
+            'Statement': [{
+                'Effect': 'Allow',
+                'Principal': {'AWS': 'arn:aws:iam::111122223333:user/convex'},
+                'Action': [
+                    's3:GetObject',
+                    's3:PutObject',
+                    's3:ListBucket'
+                ],
+                'Resource': [
+                    f'arn:aws:s3:::{uoStorageBucket.bucketname}/*',
+                    f'arn:aws:s3:::{uoStorageBucket.bucketname}'
+                ]
+            }]
+        }			
+		
+		
+		
+An error occurred (UnauthorizedOperation) when calling the CreateKeyPair operation: You are not authorized to perform this operation. Encoded authorization failure message: J29vrXrHASfCQQxlvos3ZsnMdabW5Us__CtGngPDWpkN6drVxZoBvWGdpPxRE2jnI-C-fmBB1epCDoJZqeAiG6l6uDM3sUNoYZu3xGjnghmemvB8IKpBUPhH5xqFynpUQoQphV77HRoh-vaT-1Jk2E12oUUd3XzfvArTNyezmlYc2wW6K1IGXSyZrTs4HiFPOKZHfBQtwEO4slRV-aqI_XJEd5f094d1xqzPKaxWt1lIr-OeVWk7zX9aHM2GbDRRAWRlNPi6K9UmQ_t5gVZpBLBF46woaxku20_nh4Fb5ohJT4XATcloT8rUvPQvDWFEEyB_5EU88rxCz4jIhoVRz-9IqYZgBgcvSuSHCxUOit-XvR1RxPGDsYarQPHuszcPZX9uDas8MzIVCOAn6V74pUoK2AfLJth6qnn13WKOqWvAY-Iz6Stjk-ljTU30HNGHjFzQCndaxkCPTuFWi14kEA5OlSx4QGrO8VtVRjx2l9IlYtnzTSSr2pLWUvu3ViktVsJj_Mm7WFvTnZcPHz22Gg		
+
+#scp  a file
+scp -i convex-ec2-keypair.pem r_script_parquet.r ec2-user@35.177.181.146:/tmp/
+# allow execute perms
+chmod +x /tmp/r_script_parquet.r
+
+
+
+scp -i convex-ec2-keypair.pem config ec2-user@35.176.124.213:~/.aws/
+
+sudo R CMD BATCH /tmp/r_script_parquet.r
+	
+	
+aws s3 ls 
+ 
+install arrow - uk is 52	
+
+
+arn:aws:s3:::sthconvexdc861a1b-2c52-4824-b9e9-f62873b3cb00
+
+install.packages("AWS.tools")
+aws tools not available for R version 3.4.3
+
+
+
+sparklyr
+#connect to spark 
+library(sparklyr) 
+library(dplyr) 
+sc <- spark_connect(config = "Apache Spark-ic")
+usercsv_tbl <- spark_read_parquet(sc,name = "usertbl",path="s3n://charlesbuckets31/FolderB/users.parquet") src_tbls(sc)

@@ -1,0 +1,16 @@
+************* Module InstanceManagement
+InstanceManagement.py:1:0: C0103: Module name "InstanceManagement" doesn't conform to snake_case naming style (invalid-name)
+InstanceManagement.py:24:8: C0103: Attribute name "LOGGER" doesn't conform to snake_case naming style (invalid-name)
+InstanceManagement.py:40:4: R0913: Too many arguments (7/5) (too-many-arguments)
+InstanceManagement.py:40:4: R0914: Too many local variables (18/15) (too-many-locals)
+InstanceManagement.py:81:16: E1205: Too many arguments for logging format string (logging-too-many-args)
+InstanceManagement.py:43:24: W0613: Unused argument 'role_arn' (unused-argument)
+InstanceManagement.py:44:24: W0613: Unused argument 'role_name' (unused-argument)
+InstanceManagement.py:62:12: W0612: Unused variable 'key_pair_del_resp' (unused-variable)
+InstanceManagement.py:84:16: W0612: Unused variable 'first_instance' (unused-variable)
+InstanceManagement.py:5:0: W0611: Unused import botocore (unused-import)
+InstanceManagement.py:8:0: W0611: Unused ec2_metadata imported from ec2_metadata (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 6.51/10 (previous run: 5.58/10, +0.93)
+

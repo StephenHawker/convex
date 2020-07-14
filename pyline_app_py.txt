@@ -1,0 +1,20 @@
+************* Module app
+app.py:18:0: W0105: String statement has no effect (pointless-string-statement)
+app.py:19:0: W0105: String statement has no effect (pointless-string-statement)
+app.py:24:0: R0914: Too many local variables (19/15) (too-many-locals)
+app.py:54:8: W0105: String statement has no effect (pointless-string-statement)
+app.py:87:-1: W0105: String statement has no effect (pointless-string-statement)
+app.py:108:-1: W0105: String statement has no effect (pointless-string-statement)
+app.py:117:-1: W0105: String statement has no effect (pointless-string-statement)
+app.py:133:-1: W0105: String statement has no effect (pointless-string-statement)
+app.py:143:-1: W0105: String statement has no effect (pointless-string-statement)
+app.py:163:-1: W0105: String statement has no effect (pointless-string-statement)
+app.py:77:8: W0612: Unused variable 'startup_script' (unused-variable)
+app.py:80:12: W0612: Unused variable 'instance_profile_arn' (unused-variable)
+app.py:118:8: W0612: Unused variable 'uo_instance_mgmt' (unused-variable)
+app.py:24:0: R0915: Too many statements (55/50) (too-many-statements)
+app.py:6:0: W0611: Unused import uuid (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 8.67/10 (previous run: 8.41/10, +0.27)
+

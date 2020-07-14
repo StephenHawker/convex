@@ -1,0 +1,26 @@
+{{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": "ec2:RunInstances",
+			"Resource": [
+				"arn:aws:ec2:region::image/ami-032598fcc7e9d1c7a"
+			],
+			"Condition": {
+				"StringEquals": {
+					"ec2:ResourceTag/whitelist": "true"
+				}
+			}
+		},
+		{
+			"Effect": "Allow",
+			"Action": "ec2:RunInstances",
+			"Resource": [
+				"arn:aws:ec2:region:account:instance/*",
+				"arn:aws:ec2:region:account:security-group/sg-1a2b3c4d"
+			]
+		}
+	]
+	}
+}

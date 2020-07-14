@@ -1,0 +1,4 @@
+[profile convex_instance_profile]
+
+role_arn=arn:aws:iam::707712313852:role/convex/convex_test_role
+credential_source = Ec2InstanceMetadata

@@ -1,0 +1,13 @@
+************* Module HelperFunctions
+HelperFunctions.py:1:0: C0103: Module name "HelperFunctions" doesn't conform to snake_case naming style (invalid-name)
+HelperFunctions.py:16:8: C0103: Attribute name "LOGGER" doesn't conform to snake_case naming style (invalid-name)
+HelperFunctions.py:49:12: W0715: Exception arguments suggest string formatting might be intended (raising-format-tuple)
+HelperFunctions.py:69:12: W0715: Exception arguments suggest string formatting might be intended (raising-format-tuple)
+HelperFunctions.py:98:12: W0715: Exception arguments suggest string formatting might be intended (raising-format-tuple)
+HelperFunctions.py:121:12: W0715: Exception arguments suggest string formatting might be intended (raising-format-tuple)
+HelperFunctions.py:142:12: W0715: Exception arguments suggest string formatting might be intended (raising-format-tuple)
+HelperFunctions.py:166:12: W0715: Exception arguments suggest string formatting might be intended (raising-format-tuple)
+
+------------------------------------------------------------------
+Your code has been rated at 8.86/10 (previous run: 8.36/10, +0.50)
+

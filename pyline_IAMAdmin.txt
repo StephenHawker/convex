@@ -1,0 +1,11 @@
+************* Module IAMAdmin
+IAMAdmin.py:1:0: C0103: Module name "IAMAdmin" doesn't conform to snake_case naming style (invalid-name)
+IAMAdmin.py:24:8: C0103: Attribute name "LOGGER" doesn't conform to snake_case naming style (invalid-name)
+IAMAdmin.py:144:12: W0106: Expression "[role.detach_policy(PolicyArn=policy.arn) for policy in role.attached_policies.all()]" is assigned to nothing (expression-not-assigned)
+IAMAdmin.py:149:12: W0106: Expression "[profile.remove_role(RoleName=role.name) for profile in role.instance_profiles.all()]" is assigned to nothing (expression-not-assigned)
+IAMAdmin.py:154:12: W0106: Expression "[role_policy.delete() for role_policy in role.policies.all()]" is assigned to nothing (expression-not-assigned)
+IAMAdmin.py:138:12: W0612: Unused variable 'iam' (unused-variable)
+
+------------------------------------------------------------------
+Your code has been rated at 9.31/10 (previous run: 9.08/10, +0.23)
+

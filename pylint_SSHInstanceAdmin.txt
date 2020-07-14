@@ -1,0 +1,11 @@
+************* Module SSHInstanceAdmin
+SSHInstanceAdmin.py:1:0: C0103: Module name "SSHInstanceAdmin" doesn't conform to snake_case naming style (invalid-name)
+SSHInstanceAdmin.py:14:8: C0103: Attribute name "LOGGER" doesn't conform to snake_case naming style (invalid-name)
+SSHInstanceAdmin.py:5:0: R0902: Too many instance attributes (10/7) (too-many-instance-attributes)
+SSHInstanceAdmin.py:70:16: W0612: Unused variable 'stdin' (unused-variable)
+SSHInstanceAdmin.py:47:12: W0201: Attribute 'transport' defined outside __init__ (attribute-defined-outside-init)
+SSHInstanceAdmin.py:48:12: W0201: Attribute 'session' defined outside __init__ (attribute-defined-outside-init)
+
+------------------------------------------------------------------
+Your code has been rated at 8.54/10 (previous run: 7.84/10, +0.70)
+

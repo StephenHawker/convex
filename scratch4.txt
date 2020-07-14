@@ -1,0 +1,81 @@
+{
+  "Version": "2012-10-17",
+  "Statement": {
+    "Effect": "Allow",
+    "Action": "sts:AssumeRole",
+    "Resource": "arn:aws:iam::707712313852:role/convex/convex_test_role"
+  }
+}
+
+
+
+f <- system.file("/tmp/address_file.parquet", package="miniparquet")
+
+
+usercsv_tbl <- spark_read_parquet(sc,name = "usertbl",path="s3n://sthconvex5806f5fe-d72f-4936-9a15-c6127f6b60f8/address_file.parquet") src_tbls(sc)
+
+
+install.packages("arrow", repos = "https://dl.bintray.com/ursalabs/arrow-r")
+
+
+sudo yum install -y https://apache.bintray.com/arrow/centos/7/apache-arrow-release-latest.rpm
+sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install -y https://apache.bintray.com/arrow/centos/7/apache-arrow-release-latest.rpm
+sudo yum install -y --enablerepo=epel arrow-devel # For C++
+sudo yum install -y --enablerepo=epel arrow-glib-devel # For GLib (C)
+sudo yum install -y --enablerepo=epel arrow-dataset-devel # For Arrow Dataset C++
+sudo yum install -y --enablerepo=epel parquet-devel # For Apache Parquet C++
+sudo yum install -y --enablerepo=epel parquet-glib-devel # For Parquet GLib (C)
+sudo yum install -y python3
+
+
+install sparkr
+https://amunategui.github.io/sparkr/index.html
+
+
+aws s3api get-object --bucket sthconvex084c65ba-3deb-4e0d-aa4a-c695ce419f4e --key address_file.parquet
+
+sthconvex084c65ba-3deb-4e0d-aa4a-c695ce419f4e/address_file.parquet
+
+
+aws s3 ls s3://sthconvex084c65ba-3deb-4e0d-aa4a-c695ce419f4e/convex/address_file.parquet
+
+
+aws s3 cp s3://sthconvex084c65ba-3deb-4e0d-aa4a-c695ce419f4e/address_file.parquet /tmp/testdown.parquet
+
+
+aws s3api get-object --bucket sthconvex084c65ba-3deb-4e0d-aa4a-c695ce419f4e --key address_file.parquet
+
+
+s3://sthconvex084c65ba-3deb-4e0d-aa4a-c695ce419f4e/convex/address_file.parquet
+
+s3a://sthconvex084c65ba-3deb-4e0d-aa4a-c695ce419f4e/address_file.parquet
+
+
+df = spark_read_parquet(sc, name = "disp", "s3a://sthconvex084c65ba-3deb-4e0d-aa4a-c695ce419f4e/address_file.parquet", repartition = 0, memory = TRUE)
+
+mtcars_tbl <- copy_to(sc, path="s3a://sthconvex084c65ba-3deb-4e0d-aa4a-c695ce419f4e/address_file.parquet",overwrite = TRUE)
+
+spark.yarn.jars=file://usr/local/hadoop/share/hadoop/tools/lib/hadoop-aws-3.2.1.jar,file://usr/local/hadoop/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.375.jar
+
+wget https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aws-2.7.3.jar
+wget https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4.2/aws-java-sdk-1.7.4.2.jar
+wget https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.jar
+wget https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.2.3/jackson-annotations-2.2.3.jar
+wget https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-common/2.7.3/hadoop-common-2.7.3.jar
+
+/usr/local/spark/jars
+spark-submit --master yarn \
+  --driver-class-path /usr/local/hadoop/share/hadoop/tools/lib/aws-java-sdk-bundle-1.11.375.jar \
+  --driver-class-path /usr/local/hadoop/share/hadoop/tools/lib/hadoop-aws-3.2.1.jar \
+
+
+https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aws-2.7.3.jar
+
+
+http://central.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aws-2.7.3.jar
+http://central.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar
+df = spark_read_parquet(sc, name = "disp", path="/tmp/address_file.parquet", repartition = 0, memory = TRUE)
+
+sudo Rscript /tmp/r_script_parquet.r
+lib = "/usr/lib/R/library"

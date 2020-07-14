@@ -1,0 +1,15 @@
+************* Module StorageBucket
+StorageBucket.py:1:0: C0103: Module name "StorageBucket" doesn't conform to snake_case naming style (invalid-name)
+StorageBucket.py:22:8: C0103: Attribute name "LOGGER" doesn't conform to snake_case naming style (invalid-name)
+StorageBucket.py:10:0: C0111: Missing class docstring (missing-docstring)
+StorageBucket.py:39:4: R0201: Method could be a function (no-self-use)
+StorageBucket.py:95:48: C0103: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+StorageBucket.py:103:12: W0715: Exception arguments suggest string formatting might be intended (raising-format-tuple)
+StorageBucket.py:114:23: E1101: Instance of 'StorageBucket' has no 'client' member (no-member)
+StorageBucket.py:142:8: W0612: Unused variable 'error' (unused-variable)
+StorageBucket.py:159:12: W0612: Unused variable 'response' (unused-variable)
+StorageBucket.py:57:12: W0201: Attribute 'bucketname' defined outside __init__ (attribute-defined-outside-init)
+
+------------------------------------------------------------------
+Your code has been rated at 8.74/10 (previous run: 7.76/10, +0.98)
+
