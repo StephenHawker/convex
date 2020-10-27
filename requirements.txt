@@ -16,7 +16,7 @@ Click==7.0
 clickclick==1.2.2
 colorama==0.4.1
 connexion==2.3.0
-cryptography==2.7
+cryptography==3.2
 docutils==0.15.2
 ec2-metadata==2.2.0
 entrypoints==0.3
