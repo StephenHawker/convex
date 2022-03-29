@@ -33,7 +33,7 @@ mccabe==0.6.1
 numpy==1.16.4
 openapi-spec-validator==0.2.8
 pandas==0.24.2
-paramiko==2.7.1
+paramiko==2.10.1
 pyarrow==0.17.1
 pycodestyle==2.5.0
 pycparser==2.19
